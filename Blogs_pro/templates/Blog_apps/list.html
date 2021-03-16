@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+{% extends 'Blog_apps/base.html' %}
+{% load static %}
+{% block body_block %}
+    <h1> Blogs apps </h1>
+{% for post in post_list %}
+    <h3><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h3>
+    <p id="date">Publish on {{ post.publish }} by {{ post.author }}</p>
+
+   <p> tags:{% for tag in post.tags.all %}
+       <a href="{%url "post_list_by_tag_name" tag.slug %}" class="btn-success"> {{ tag.name }}</a>
+   {% endfor %}</p>
+    <p>{{ post.body|truncatewords:20 | linebreaks }}</p>
+    {% endfor %}
+    {% include 'Blog_apps/pagination.html' with page=page_obj %}
+
+    <!-- below code use for CBV and above code use for FBV -->
+    <!-- { % include 'Blog_apps/pagination.html' with page=page_obj %} -->
+    <!-- { % include 'Blog_apps/pagination.html' with page=post_list %} -->
+
+
+{% endblock %}

@@ -1,0 +1,42 @@
+.content{
+    width: 60%;
+    float: left;
+    padding: 0 0 0 30px;
+}
+.sidebar{
+    width: 30%;
+    float: right;
+    padding: 20px;
+    background: greenyellow;
+}
+body{
+    background: url("https://images.unsplash.com/photo-1595922234439-b115384fa6c7?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzZ8fGJldXRpZnVsfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+font-style: italic;
+    color:red;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+h3,a{
+    color:blue;
+}
+h2,h4{
+    color: darkblue;
+}
+h1{
+    color: yellow;
+    border-bottom: red solid 2px;
+}
+#date,#ch,#cb{
+    font-size: 12px;
+    color: wheat;
+    font-style: italic;
+}
+p{
+    color: red;
+}
+#pcount{
+    font-size: 20px;
+    color: magenta;
+    font-weight: bold;
+}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends 'Blog_apps/base.html' %}
+{% load static %}
+{% block body_block %}
+    {% if sent %}
+        <h1>Email successfully sent </h1>
+        <h2> Post with the title: {{ post.title }} info share by email</h2>
+    {% else %}
+        <h1> share "{{ post.title }}" by Email </h1>
+         <form method="post">
+            {{ form.as_p }}
+            {% csrf_token %}
+            <input type="submit" value="send mail" class="btn btn-success">
+         </form>
+    {% endif %}
+{% endblock %}
